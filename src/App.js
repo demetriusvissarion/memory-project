@@ -6,7 +6,7 @@ import { useDispatch } from "react-redux";
 import { getPosts } from "./actions/posts";
 import Posts from "./components/Posts/Posts";
 import Form from "./components/Form/Form";
-import memories from "./images/memories.png";
+import memories from "./images/memories02.jpeg";
 import useStyles from "./styles";
 
 const App = () => {
@@ -23,7 +23,7 @@ const App = () => {
         <Typography className={classes.heading} variant="h2" align="center">
           Memories
         </Typography>
-        <img className={classes.image} src={memories} alt="icon" height="60" />
+        <img className={classes.image} src={memories} alt="icon" height="100" />
       </AppBar>
       <Grow in>
         <Container>
