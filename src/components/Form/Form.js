@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Button, Typography, Paper } from "@mui/material";
-import { TextField } from "@mui/material";
+import { TextField, Button, Typography, Paper } from "@mui/material";
 import FileBase from "react-file-base64";
 import { useDispatch, useSelector } from "react-redux";
 
@@ -25,6 +24,17 @@ const Form = ({ currentId, setCurrentId }) => {
     if (post) setPostData(post);
   }, [post]);
 
+  const clear = () => {
+    setCurrentId(0);
+    setPostData({
+      creator: "",
+      title: "",
+      message: "",
+      tags: "",
+      selectedFile: "",
+    });
+  };
+
   const handleSubmit = async (e) => {
     e.preventDefault();
 
@@ -35,17 +45,6 @@ const Form = ({ currentId, setCurrentId }) => {
       dispatch(updatePost(currentId, postData));
       clear();
     }
-  };
-
-  const clear = () => {
-    setCurrentId(0);
-    setPostData({
-      creator: "",
-      title: "",
-      message: "",
-      tags: "",
-      selectedFile: "",
-    });
   };
 
   return (
