@@ -1,6 +1,6 @@
-import { styled } from "@mui/material/styles";
+import { styled as makeStyles } from "@mui/system";
 
-export default styled((theme) => ({
+export default makeStyles((theme) => ({
   mainContainer: {
     display: "flex",
     alignItems: "center",
